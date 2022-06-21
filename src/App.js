@@ -24,10 +24,25 @@ const costs = {
 const offers = ["Buy one red get second half price"];
 
 const basket = [];
+const store = {
+  cost: 0,
+};
 
 const addToBasket = (product) => {
   basket.push(product);
 };
+
+addToBasket(new Product("Red Plate", "R01", 32.95));
+addToBasket(new Product("Red Plate", "R01", 32.95));
+addToBasket(new Product("Red Plate", "R01", 32.95));
+addToBasket(new Product("Red Plate", "R01", 32.95));
+
+const getTotalPrice = () => {
+  const total = basket.reduce((pre, curr) => +pre + +curr.price, 0);
+  return total;
+};
+
+console.log(getTotalPrice());
 
 function App() {
   return <div>Salam</div>;
