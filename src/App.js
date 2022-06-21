@@ -33,9 +33,11 @@ const addToBasket = (product) => {
 };
 
 addToBasket(new Product("Red Plate", "R01", 32.95));
+addToBasket(new Product("Red Plate", "R01", 30.95));
 addToBasket(new Product("Red Plate", "R01", 32.95));
 addToBasket(new Product("Red Plate", "R01", 32.95));
-addToBasket(new Product("Red Plate", "R01", 32.95));
+
+console.log(basket);
 
 const getTotalPrice = () => {
   const total = basket.reduce((pre, curr) => +pre + +curr.price, 0);
