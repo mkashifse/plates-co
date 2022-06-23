@@ -50,15 +50,7 @@ return {
    };
 ```
 
-## Component & Hook diagrams
-
-```mermaid
-sequenceDiagram
-useProductCatalog->> App: using catalogue hook in app component
-useBasket -->> App:  using basket feature in app component
-```
-
-And this will produce a flow chart:
+Components and Hooks Daigram:
 
 ```mermaid
 graph LR
