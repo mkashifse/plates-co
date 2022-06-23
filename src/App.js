@@ -89,7 +89,7 @@ function App() {
       .reduce((pre, curr) => pre + curr.price, 0);
 
     const total = applyCostRules(sum + applyOfferOnRed());
-    return basket.length ? "$" + truncate(total) : "";
+    return basket.length ? "$" + truncate(total) : "--";
   };
 
   const onClear = () => {
@@ -110,9 +110,9 @@ function App() {
         </div>
       </div>
       <div className="mt-4">
-        <div className="w-full grid grid-cols-4  divide-x divide-y">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 px-4">
           {products.map((item, i) => (
-            <div className="p-4" key={i}>
+            <div className="p-2" key={i}>
               <ProductCard
                 {...item}
                 isOffer={item.isOffer}

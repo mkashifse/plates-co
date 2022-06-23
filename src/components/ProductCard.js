@@ -1,8 +1,17 @@
 import { Button } from "./kit";
 
 const ProductCard = ({ image, name, code, price, onAdd, isOffer }) => (
-  <div className=" rounded-xl   hover:shadow-xl ">
-    <img src="white.jpeg" className="aspect-auto rounded-t"></img>
+  <div className=" rounded-xl   hover:shadow-xl border border-slate-100 ">
+    <img
+      src={
+        code === "R01"
+          ? "red.png"
+          : code === "G01"
+          ? "green.png"
+          : "blue.jpeg"
+      }
+      className="aspect-auto rounded-t"
+    ></img>
     <div className="p-4">
       <div>
         <h3 className="text-slate-600 text-xs">{code ? code : "--"}</h3>
