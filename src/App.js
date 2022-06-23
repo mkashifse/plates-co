@@ -17,10 +17,15 @@ function App() {
     <div className="">
       <div className="flex items-center justify-between p-4 border-b  bg-white space-x-4">
         <h1 className="font-bold flex-grow">Plates Co.</h1>
-        <div className="rounded-xl bg-gray-200 px-4 p-1">
+        <div
+          className="rounded-xl bg-gray-200 px-4 p-1"
+          data-testid="totalPrice"
+        >
           {basket.length ? getTotalPrice() : "--"}
         </div>
-        <Button onClick={onClear}>Clear Basket</Button>
+        <Button onClick={onClear} data-testid="clearBasket">
+          Clear Basket
+        </Button>
       </div>
       <div className="bg-gray-600 text-xs p-1 flex items-center text-white px-4">
         <p>BASKET TEST:</p>

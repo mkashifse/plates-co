@@ -24,7 +24,7 @@ const ProductCard = ({ image, name, code, price, onAdd, isOffer }) => (
             ""
           )}
         </div>
-        <Button className="w-full" onClick={() => onAdd()}>
+        <Button className="w-full" onClick={() => onAdd()} data-testid={code}>
           Add To Cart
         </Button>
       </div>
