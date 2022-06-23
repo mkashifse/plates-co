@@ -4,23 +4,24 @@ import { ProductCard } from "./components";
 import { Button, Input } from "./components/kit";
 
 class Plate {
-  constructor(_name, _code, _price, _isOffer = false) {
+  constructor(_name, _code, _price, _isOffer = false, _image) {
     this.name = _name;
     this.code = _code;
     this.price = _price;
     this.isOffer = _isOffer;
+    this.image = _image;
   }
 
   static getRed(price = 32.95) {
-    return new Plate("Red Plate", "R01", price, true);
+    return new Plate("Red Plate", "R01", price, true, "red.png");
   }
 
   static getGreen(price = 24.95) {
-    return new Plate("Green Plate", "G01", price);
+    return new Plate("Green Plate", "G01", price, false, "green.png");
   }
 
   static getBlue(price = 7.95) {
-    return new Plate("Blue Plate", "B01", price);
+    return new Plate("Blue Plate", "B01", price, false, "blue.jpeg");
   }
 }
 
@@ -109,7 +110,6 @@ function App() {
             <div className="p-2" key={i}>
               <ProductCard
                 {...item}
-                isOffer={item.isOffer}
                 onAdd={() => addToBasket(item)}
               ></ProductCard>
             </div>
