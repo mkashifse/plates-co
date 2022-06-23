@@ -1,9 +1,7 @@
-
 # Plates Co.
 
 A simple [react](https://reactjs.org/) application using [tailwindcss](https://tailwindcss.com/) for design purpose.
 
- 
 ### Folder Structure
 
 ```
@@ -26,31 +24,31 @@ App.js
 README.md
 ```
 
-  
-
 ## Custom Hooks
 
 ### useProductCatalogue
 
-> products => list of products
+```
+return {
+    products, // array:  list of products
+    addProduct, // function:  add new product if needed
+    initProducts, // function: initialise all products pre populated(HARD CODED)
+    removeProduct, // function: remove product if needed
+};
+```
 
-> addProduct => a function which add new product
-
-> initProducts => initialize all predifined products currentyly "HARD CODE"
-
-> removeProduct = remove product if needed
 ### useBasket
-> basket    => state variable
 
-> onClear  => function to clear basket
-
-> getTotalPrice => calcluate the total price of an order
-
-> sumWithOfferOn => caculate sum with offer
-
-> applyDeliveryCharges => appy delivery charges based on rules, currently the rules are hardCoded
-
-> addToBasket => add new item to basket
+```
+return {
+    basket, // array: list of items
+    onClear, // function: to clear basket
+    getTotalPrice, // function: calculate total price
+    sumWithOfferOn, // function: sum products with offer
+    applyDeliveryCharges, // function: apply delivery charges on total,  based on rules, currently the rules are hardCoded
+    addToBasket, // function: add new item to basket
+   };
+```
 
 ## Component & Hook diagrams
 
@@ -66,6 +64,6 @@ And this will produce a flow chart:
 graph LR
 B((useBasket)) -- usingHook -->  A[AppComponent]
 C((useProductCatalague)) -- usingHook -->  A[AppComponent]
-
+D[ProductCatalogue] -- Calling Component --> A[AppComponent]
 
 ```
