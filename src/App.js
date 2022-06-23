@@ -33,14 +33,6 @@ function App() {
     Plate.getRed(),
     Plate.getGreen(),
     Plate.getBlue(),
-    Plate.getBlue(),
-    Plate.getBlue(),
-    Plate.getGreen(),
-    Plate.getRed(),
-    Plate.getRed(),
-    Plate.getRed(),
-    Plate.getGreen(),
-    Plate.getGreen(),
   ]);
 
   const [basket, setBasket] = useState([]);
@@ -100,7 +92,9 @@ function App() {
     <div className="">
       <div className="flex items-center justify-between p-4 border-b  bg-white space-x-4">
         <h1 className="font-bold flex-grow">Plates Co.</h1>
-        <div className="rounded-xl bg-gray-200 px-4 p-1">{getTotalPrice()}</div>
+        <div className="rounded-xl bg-gray-200 px-4 p-1">
+          {basket.length ? getTotalPrice() : "--"}
+        </div>
         <Button onClick={onClear}>Clear Basket</Button>
       </div>
       <div className="bg-gray-600 text-xs p-1 flex items-center text-white px-4">
