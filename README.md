@@ -2,6 +2,30 @@
 
 A simple [react](https://reactjs.org/) application using [tailwindcss](https://tailwindcss.com/) for design purpose.
 
+
+### Instalation after cloning Repo
+```
+npm install
+```
+
+### Run Test
+```
+npm run test
+
+ PASS  src/App.test.js
+  √ It should render App component (30 ms)
+  √ Basket: B01, B01 = $37.85 (14 ms)
+  √ Basket: R01, R01 = $54.37 (9 ms)
+  √ Basket: R01, G01 = $60.85 (11 ms)
+  √ Basket: B01, B01, R01, R01, R01 = $98.27 (13 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.565 s, estimated 1 s
+Ran all test suites related to changed files.
+```
+
 ### Folder Structure
 
 ```
