@@ -33,15 +33,23 @@ README.md
 ### useProductCatalogue
 
 > products => list of products
+
 > addProduct => a function which add new product
+
 > initProducts => initialize all predifined products currentyly "HARD CODE"
+
 > removeProduct = remove product if needed
 ### useBasket
 > basket    => state variable
+
 > onClear  => function to clear basket
+
 > getTotalPrice => calcluate the total price of an order
+
 > sumWithOfferOn => caculate sum with offer
+
 > applyDeliveryCharges => appy delivery charges based on rules, currently the rules are hardCoded
+
 > addToBasket => add new item to basket
 
 ## Component & Hook diagrams
